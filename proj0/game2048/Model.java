@@ -142,16 +142,15 @@ public class Model extends Observable {
                         {
                         if(board.move(c,4-frontblocks,t))// move,and to tell whether it's a merge.
                         {
-                            score+=board.tile(c,4-frontblocks).value();
+                            score+=board.tile(c,4-frontblocks).value();frontblocks++;
                         }
-
-                            frontblocks++;
 
 
 
                         }
                         else {
-                            board.move(c,3-frontblocks,t);frontblocks++;
+                            board.move(c,3-frontblocks,t);
+                            frontblocks++;
                         }
                         }
                         changed=true;
