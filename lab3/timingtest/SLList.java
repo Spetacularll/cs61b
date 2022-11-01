@@ -21,6 +21,10 @@ public class SLList<Item> {
 	public SLList() {
 		sentinel = new IntNode(null, null);
 		size = 0;
+		IntNode p = sentinel.next;
+		while(p!=null){
+
+		}
 	}
 
 	public SLList(Item x) {
@@ -29,6 +33,29 @@ public class SLList<Item> {
 		size = 1;
 	}
 
+	public String longestone(){
+		int size=0;
+
+		IntNode p = sentinel.next;
+		String big =(String) p .item;
+		while(p!=null){
+			String temp = (String)p.item;
+			if(size<temp.length()){
+				size=temp.length();
+				big = temp;
+			}
+		}
+		return big;
+	}
+	public void print(){
+		IntNode p;
+		p=sentinel.next;
+		while (p!=sentinel){
+			System.out.print(p.item+" ");
+			p=p.next;
+		}
+		System.out.println();
+	}
 	/** Adds x to the front of the list. */
 	public void addFirst(Item x) {
 		sentinel.next = new IntNode(x, sentinel.next);
