@@ -1,8 +1,8 @@
 package deque;
 
-public class LinkedListDeque<Ehh> {
+public class LinkedListDeque<Item> {
     private class item{
-        Ehh data;
+        Item data;
         item pre;
         item next;
     }
@@ -20,7 +20,7 @@ public class LinkedListDeque<Ehh> {
     public int size() {
         return size;
     }
-    public void addFirst(Ehh x){
+    public void addFirst(Item x){
     item temp= new item() ;
     temp.data=x;
     sentinel.next.pre=temp;
@@ -29,7 +29,7 @@ public class LinkedListDeque<Ehh> {
     sentinel.next=temp;
     size+=1;
     }
-    public void addLast(Ehh x){
+    public void addLast(Item x){
         item temp=new item();
         temp.data=x;
 
@@ -57,9 +57,9 @@ public class LinkedListDeque<Ehh> {
     }
     System.out.println();
     }
-    public  Ehh removeFirst(){
+    public  Item removeFirst(){
     if(!this.isEmpty()){
-     Ehh temp=sentinel.next.data;
+     Item temp=sentinel.next.data;
     sentinel.next=sentinel.next.next;
     sentinel.next.next.pre=sentinel;
     size-=1;
@@ -68,9 +68,9 @@ public class LinkedListDeque<Ehh> {
     }
     return null;
    }
-    public Ehh removeLast(){
+    public Item removeLast(){
     if(!this.isEmpty()){
-    Ehh temp=sentinel.pre.data;
+    Item temp=sentinel.pre.data;
     sentinel.pre.pre.next=sentinel;
     sentinel.pre=sentinel.pre.pre;
     size-=1;
@@ -79,7 +79,7 @@ public class LinkedListDeque<Ehh> {
     }
     return null;
    }
-    public Ehh get(int index){
+    public Item get(int index){
     item p=sentinel.next;
     int count=0;
     while(count<index&&p!=sentinel){
@@ -91,14 +91,5 @@ public class LinkedListDeque<Ehh> {
     }
     return p.data;
     }
-    public Ehh getRecursive(int index){
-        if(index>size) return null;
-
-        item p = sentinel.next;
-
-
-    }
-
-
 
 }

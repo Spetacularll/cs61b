@@ -16,7 +16,7 @@ public class GuitarHeroLite {
 
         while (true) {
 
-            /* check if the user has typed a key; if so, process it */
+            /* check if the user has typed a key; if so, process it*/
             if (StdDraw.hasNextKeyTyped()) {
                 char key = StdDraw.nextKeyTyped();
                 if (key == 'a') {
@@ -31,6 +31,7 @@ public class GuitarHeroLite {
 
             /* play the sample on standard audio */
             StdAudio.play(sample);
+            StdAudio.play(440);
 
             /* advance the simulation of each guitar string by one step */
             stringA.tic();

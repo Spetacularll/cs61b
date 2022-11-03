@@ -13,13 +13,22 @@ import static org.junit.Assert.*;
 public class TestGuitarString  {
 
     @Test
-    public void testPluckTheAString() {
+    public void testPluckTheAString() {//original sound :GuitarHeroLite.CONCERT_A
         GuitarString aString = new GuitarString(GuitarHeroLite.CONCERT_A);
         aString.pluck();
         for (int i = 0; i < 50000; i += 1) {
             StdAudio.play(aString.sample());
             aString.tic();
         }
+    }
+    @Test
+    public void TEST2(){
+       GuitarString test = new GuitarString(800);
+            test.pluck();
+            while(true){
+                StdAudio.play(test.sample());
+                test.tic();
+            }
     }
 
     @Test

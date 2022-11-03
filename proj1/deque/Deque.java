@@ -60,8 +60,8 @@ public class Deque<Item> {
     public  Item removeFirst(){
     if(!this.isEmpty()){
      Item temp=sentinel.next.data;
-    sentinel.next=sentinel.next.next;
     sentinel.next.next.pre=sentinel;
+    sentinel.next=sentinel.next.next;
     size-=1;
     return temp;
 
