@@ -1,10 +1,10 @@
 package gh2;
 
 
- import deque.Deque;
+import deque.Deque;
 
 //Note: This file will not compile until you complete the Deque implementations
-public class GuitarString {
+public class HarpString {
     /** Constants. Do not change. In case you're curious, the keyword final
      * means the values cannot be changed at runtime. We'll discuss this and
      * other topics in lecture on Friday. */
@@ -19,13 +19,13 @@ public class GuitarString {
     }
 
     /* Create a guitar string of the given frequency.  */
-    public GuitarString(double frequency) {
+    public HarpString(double frequency) {
         int capacity;
         capacity = (int) Math.round(SR/frequency);
         buffer= new Deque<>();
         buffer.addFirst(0.0);
         for (int i = 0; i < capacity-1; i++) {
-           buffer.addLast(0.0);
+            buffer.addLast(0.0);
         }
     }
 
@@ -37,7 +37,7 @@ public class GuitarString {
         //       other. This does not mean that you need to check that the numbers
         //       are different from each other. It means you should repeatedly call
         //       Math.random() - 0.5 to generate new random numbers for each array index.
-         new GuitarString(SR/buffer.size());
+        new HarpString(SR/buffer.size());
         for(int i=0;i< buffer.size();i++){
             buffer.removeLast();
             buffer.addFirst(Math.random()-0.5);
@@ -50,8 +50,8 @@ public class GuitarString {
     public void tic() {
         double frontnow = buffer.removeFirst();
         double average = buffer.get(0);
-
         buffer.addLast((frontnow+average)/2*DECAY);
+
     }
 
     /* Return the double at the front of the buffer. */

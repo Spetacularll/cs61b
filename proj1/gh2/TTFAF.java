@@ -18,6 +18,7 @@ public class TTFAF {
             InputStream source = new ByteArrayInputStream(Base64.getDecoder().decode(TTFAF));
             source = new GZIPInputStream(source);
             GuitarPlayer player = new GuitarPlayer(source);
+        //    GuitarPlayer player = new GuitarPlayer(new java.io.File("C:/Users/Forge/Downloads/Hotel-California.mid"));
             player.play();
         } catch (IOException e) {
             e.printStackTrace();
