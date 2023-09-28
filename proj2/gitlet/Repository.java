@@ -1,6 +1,8 @@
 package gitlet;
 
 import java.io.File;
+import java.util.ArrayList;
+
 import static gitlet.Utils.*;
 
 // TODO: any imports you need here
@@ -22,8 +24,15 @@ public class Repository {
 
     /** The current working directory. */
     public static final File CWD = new File(System.getProperty("user.dir"));
+    public static ArrayList<Commit>
     /** The .gitlet directory. */
     public static final File GITLET_DIR = join(CWD, ".gitlet");
-
+    public static void Init(){
+            if(GITLET_DIR.exists()){
+            System.out.println("A Gitlet version-control system already exists in the current directory.");
+            System.exit(0);
+        }
+        GITLET_DIR.mkdir();
+    }
     /* TODO: fill in the rest of this class. */
 }

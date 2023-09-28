@@ -24,7 +24,9 @@ public class ArrayDeque<T>{
     }
     public void resize(){
         T[] temp = (T[]) new Object[size*2];
-
+        for(int i=0;i<size;i++){
+            temp[i] = core[i];
+        }
 
     }
     public void addFirst(T x){

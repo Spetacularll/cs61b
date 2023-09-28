@@ -59,7 +59,7 @@ public class GuitarHero {
 
                   if(position>=0){
                 CONCERTSTRING[position].pluck();
-                      System.out.println(44100/CONCERTSTRING[position].getBuffer().size());
+
                 }
 
              //     CONCERTSTRING[0].pluck();

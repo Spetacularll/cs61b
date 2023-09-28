@@ -1,5 +1,8 @@
 package deque;
-
+//SPetacularlII部分是我写的代码，这个project 来源是 cs61b 的课程。
+//包含Deque,ArrayDeque,LikedListDeque,GuitarHero,GuitarString,和一些小的测试代码
+//这是一个循环双向链表。ArrayDeque则是数组，在gh2中使用到了这个循环双向链表。(GuitarHero中）
+//这个项目需要一些库才能实现
 public class Deque<Item> {
     private class item{
         Item data;
